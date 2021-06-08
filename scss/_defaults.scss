@@ -24,7 +24,7 @@ $fontweight: (
 );
 
 $fontsize: (
-   h1: 50px,
+   h1: 46px,
    h2: 40px,
    h3: 34px,
    h4: 30px,
@@ -109,8 +109,8 @@ body {
 }
 
 .h1 {
-   @include fontstyle(h1, extrabold, none);
-   line-height: 61px;
+   @include fontstyle(h1, bold, none);
+   line-height: 50px;
    color: $lazureblue;
 }
 .h2 {
