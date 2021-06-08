@@ -1,0 +1,183 @@
+//COLORS
+$lazureblue: #3c39d0;
+$bluekraiola: #4945ff;
+$slateblue: #6c69ff;
+$signalblack: #2b2a2a;
+$graybrown: #343434;
+$dullgray: #676767;
+$paleblue: #e5e5e7;
+$verypaleblue: #f7f7f8;
+$deepyellow: #ffd360;
+$yellowpink: #f34141;
+
+// FONTS
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;1,700&display=swap");
+
+$fontfamily: "Montserrat";
+
+$fontweight: (
+   extrabold: 800,
+   bold: 700,
+   semibold: 600,
+   medium: 500,
+   regular: 400,
+);
+
+$fontsize: (
+   h1: 50px,
+   h2: 40px,
+   h3: 34px,
+   h4: 30px,
+   h5: 26px,
+   extratext: 20px,
+   textbig: 18px,
+   textplus: 16px,
+   text: 15px,
+   semitext: 14px,
+);
+
+$texttransform: (
+   none: none,
+   cap: capitalize,
+   upper: uppercase,
+);
+
+// Nixit for font style
+@mixin fontstyle($fw, $fs, $tt) {
+   @if map-has-key($fontweight, $fw) {
+      font-weight: #{map-get($fontweight, $fw)};
+   } @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$fw}`. "
+         + "Please make sure it is defined in `$breakpoints` map.";
+   }
+   @if map-has-key($fontsize, $fs) {
+      font-size: #{map-get($fontsize, $fs)};
+   } @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$fs}`. "
+         + "Please make sure it is defined in `$breakpoints` map.";
+   }
+   @if map-has-key($texttransform, $tt) {
+      text-transform: #{map-get($texttransform, $tt)};
+   } @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$tt}`. "
+         + "Please make sure it is defined in `$breakpoints` map.";
+   }
+}
+
+// Example
+
+//  .featur-item__h4 {
+//    @include fontstyle(semibold, h4, cap);
+// }
+
+// .featur-item__text {
+//    @include fontstyle(regular, 0, cap);
+//    font-size: 15px;
+// }
+// .featur-item {
+//    @each $font, $size in $fontsize {
+// &__#{$font} {
+//          font-size: $size;
+//       }
+//    }
+// }
+
+// MEDIA
+// $level_1: 1170px;
+// $level_2: 1100px;
+// $level_3: 1000px;
+// $level_4: 900px;
+// $level_5: 800px;
+// $level_6: 700px;
+$level_7: 600px;
+$level_8: 576px;
+
+// WIDTH
+$desktopwidth: 1600px;
+
+.container {
+   max-width: $desktopwidth + 30px;
+   margin: 0 auto;
+   padding: 0 15px;
+   @media (max-width: $level_7) {
+      padding: 0 8px;
+   }
+}
+
+section,
+article,
+header,
+main,
+footer,
+aside {
+   display: block;
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   font-family: $fontfamily;
+   min-width: $level_9;
+   min-height: 100vh;
+}
+
+.main {
+   flex-grow: 1;
+}
+
+.h1 {
+   @include fontstyle(h1, extrabold, none);
+   line-height: 61px;
+   color: $lazureblue;
+}
+.h2 {
+   @include fontstyle(h2, bold, none);
+   line-height: 50px;
+   color: $signalblack;
+}
+.h3 {
+   @include fontstyle(h3, bold, none);
+   line-height: 50px;
+   color: $signalblack;
+}
+.h4 {
+   @include fontstyle(h4, bold, none);
+   line-height: 24px;
+   color: $signalblack;
+}
+.h5 {
+   @include fontstyle(h5, extrabold, none);
+   line-height: 32px;
+   color: $signalblack;
+}
+.extratext {
+   @include fontstyle(extratext, medium, none);
+   line-height: 24px;
+   color: $signalblack;
+}
+.textbig {
+   @include fontstyle(textbig, medium, none);
+   line-height: 28px;
+   color: $dullgray;
+}
+.textplus {
+   @include fontstyle(textplus, medium, none);
+   line-height: 20px;
+   color: $signalblack;
+}
+.text {
+   @include fontstyle(text, regular, none);
+   line-height: 24px;
+   color: $dullgray;
+}
+.semitext {
+   @include fontstyle(semitext, regular, none);
+   line-height: 22px;
+   color: $dullgray;
+}
+
+// HOVER
+@media (min-width: 678px) {
+   //----------- Header
+}
