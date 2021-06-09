@@ -146,7 +146,7 @@ body {
 
 .h1 {
   text-transform: none;
-  line-height: 61px;
+  line-height: 50px;
   color: #3c39d0;
 }
 
@@ -175,31 +175,208 @@ body {
 }
 
 .extratext {
+  font-weight: 500;
   text-transform: none;
   line-height: 24px;
   color: #2b2a2a;
 }
 
 .textbig {
+  font-weight: 500;
+  font-size: 18px;
   text-transform: none;
   line-height: 28px;
   color: #676767;
 }
 
 .textplus {
+  font-weight: 500;
+  font-size: 16px;
   text-transform: none;
   line-height: 20px;
   color: #2b2a2a;
 }
 
 .text {
+  font-weight: 400;
+  font-size: 15px;
   text-transform: none;
   line-height: 24px;
   color: #676767;
 }
 
 .semitext {
+  font-weight: 400;
+  font-size: 14px;
   text-transform: none;
   line-height: 22px;
   color: #676767;
+}
+
+.header-top {
+  background: #eff0f1;
+}
+
+.header-top__wrapp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.header-top__location, .header-top__mail {
+  max-width: 370px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-top__clock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 100px;
+}
+
+.header-top-text {
+  margin-left: 5px;
+}
+
+.header-bottom__wrapp {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(180px, 245px) minmax(auto, 183px) minmax(auto, 516px) minmax(auto, 60px) minmax(auto, 180px);
+      grid-template-columns: minmax(180px, 245px) minmax(auto, 183px) minmax(auto, 516px) minmax(auto, 60px) minmax(auto, 180px);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  -webkit-column-gap: 40px;
+          column-gap: 40px;
+}
+
+.header-bottom__wrapp .logo__img {
+  width: 100%;
+}
+
+.header-bottom__wrapp .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+  line-height: 17px;
+}
+
+.header-bottom__wrapp .menu .menu__link {
+  margin-left: 40px;
+}
+
+.header-bottom__wrapp .menu .menu__link:first-child {
+  margin-left: 0;
+}
+
+.header-bottom__wrapp .catalog {
+  position: relative;
+  width: 182px;
+  padding: 14px 30px 14px 30px;
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#6c69ff), to(#4f4bff));
+  background: linear-gradient(180deg, #6c69ff 0%, #4f4bff 100%);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.header-bottom__wrapp .catalog__summary {
+  list-style: none;
+}
+
+.header-bottom__wrapp .catalog::before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 30px;
+  width: 18px;
+  height: 15px;
+  background-image: url(../img/svg/burger.svg);
+  z-index: 2;
+}
+
+.header-bottom__wrapp .preview-cart {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (25px)[2];
+      grid-template-columns: repeat(2, 25px);
+  gap: 5px 10px;
+  text-align: center;
+}
+
+.header-bottom__wrapp .preview-cart__count {
+  text-align: center;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  padding: 4px;
+  background: #e5e5e7;
+  border-radius: 50%;
+  height: 24px;
+}
+
+.header-bottom__wrapp .preview-cart__price {
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+}
+
+.header-bottom__wrapp .preview-cart__count, .header-bottom__wrapp .preview-cart__price {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+  color: #343434;
+}
+
+.header-bottom__wrapp .preview-cart__img {
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.header-bottom__wrapp .order-call__img {
+  padding: 8px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#6b68ff), to(#504cff));
+  background: linear-gradient(180deg, #6b68ff 0%, #504cff 100%);
+  border-radius: 50%;
+}
+
+.header-bottom__wrapp .order-call__link {
+  width: 141px;
+  font-weight: 700;
+}
+
+.header-bottom__wrapp .order-call__btn {
+  width: 120px;
+  font-size: 13px;
+  line-height: 16px;
+  color: #676767;
+  background: none;
 }
