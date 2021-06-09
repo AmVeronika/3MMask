@@ -1,0 +1,105 @@
+.bread-crumbs {
+   display: flex;
+   justify-content: space-between;
+   max-width: 175px;
+   align-items: baseline;
+   margin-top: 20px;
+   &__img,
+   &__text-color {
+      color: $signalblack;
+   }
+   &__text {
+      line-height: 17px;
+   }
+}
+
+.contact-details {
+   &__wrapp {
+      display: grid;
+   }
+   &__item {
+      background: $verypaleblue;
+      border-radius: 10px;
+   }
+   &__adress {
+      display: grid;
+      grid-template-columns: 22px minmax(auto, 1fr);
+   }
+   &__text {
+      font-weight: 600;
+      line-height: 22px;
+      color: $bluekraiola;
+   }
+}
+
+.ya-map {
+   position: absolute;
+   z-index: 1;
+}
+
+.container-small_padding {
+   padding-top: 63px;
+   padding-bottom: 63px;
+}
+
+.form-call {
+   position: relative;
+   z-index: 2;
+   background: #ffffff;
+   box-shadow: 0px 4px 20px rgba(73, 69, 255, 0.2);
+   border-radius: 10px;
+   width: 370px;
+   height: 339px;
+   padding: 30px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   &__title {
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+      color: $signalblack;
+      &::after {
+         position: relative;
+         bottom: 11px;
+         content: "";
+         display: block;
+         width: 240px;
+         height: 6px;
+         background: rgba(73, 69, 255, 0.3);
+      }
+   }
+   &__subtitle {
+      font-size: 16px;
+      line-height: 22px;
+      text-align: center;
+      color: #2b2a2a;
+   }
+   &__input {
+      background: #f7f7f8;
+      border-radius: 10px;
+      padding: 13px 76px 13px 46px;
+      &::placeholder {
+         color: $dullgray;
+      }
+      &_wrap {
+         position: relative;
+      }
+   }
+   &__svg {
+      position: absolute;
+      z-index: 1;
+      top: 15px;
+      left: 20px;
+      width: 16px;
+      height: 16px;
+   }
+   &__btn {
+      background: linear-gradient(180deg, #716fff 0%, #4945ff 100%);
+      border-radius: 10px;
+      padding: 17px 57px;
+      color: $verypaleblue;
+   }
+}

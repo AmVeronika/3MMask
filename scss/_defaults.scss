@@ -65,8 +65,8 @@ $texttransform: (
 }
 
 // MEDIA
-// $level_1: 1170px;
-// $level_2: 1100px;
+$level_1: 1350px;
+$level_2: 1170px;
 // $level_3: 1000px;
 // $level_4: 900px;
 // $level_5: 800px;
@@ -79,6 +79,15 @@ $desktopwidth: 1600px;
 
 .container {
    max-width: $desktopwidth;
+   margin: 0 auto;
+   padding: 0 15px;
+   @media (max-width: $level_7) {
+      padding: 0 8px;
+   }
+}
+
+.container-small {
+   max-width: $level_2;
    margin: 0 auto;
    padding: 0 15px;
    @media (max-width: $level_7) {
@@ -134,27 +143,27 @@ body {
    color: $signalblack;
 }
 .extratext {
-   @include fontstyle(extratext, medium, none);
+   @include fontstyle(medium, extratextмогу, none);
    line-height: 24px;
    color: $signalblack;
 }
 .textbig {
-   @include fontstyle(textbig, medium, none);
+   @include fontstyle(medium, textbig, none);
    line-height: 28px;
    color: $dullgray;
 }
 .textplus {
-   @include fontstyle(textplus, medium, none);
+   @include fontstyle(medium, textplus, none);
    line-height: 20px;
    color: $signalblack;
 }
 .text {
-   @include fontstyle(text, regular, none);
+   @include fontstyle(regular, text, none);
    line-height: 24px;
    color: $dullgray;
 }
 .semitext {
-   @include fontstyle(semitext, regular, none);
+   @include fontstyle(regular, semitext, none);
    line-height: 22px;
    color: $dullgray;
 }
