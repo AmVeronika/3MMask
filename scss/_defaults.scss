@@ -165,10 +165,12 @@ body {
 .semitext {
    @include fontstyle(regular, semitext, none);
    line-height: 22px;
-   color: $dullgray;
+   color: $dullgray; 
 }
 
 // HOVER
 @media (min-width: 678px) {
    //----------- Header
 }
+
+
