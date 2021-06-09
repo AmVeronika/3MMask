@@ -65,8 +65,8 @@ $texttransform: (
 }
 
 // MEDIA
-// $level_1: 1170px;
-// $level_2: 1100px;
+$level_1: 1350px;
+$level_2: 1170px;
 // $level_3: 1000px;
 // $level_4: 900px;
 // $level_5: 800px;
@@ -156,10 +156,12 @@ body {
 .semitext {
    @include fontstyle(regular, semitext, none);
    line-height: 22px;
-   color: $dullgray;
+   color: $dullgray; 
 }
 
 // HOVER
 @media (min-width: 678px) {
    //----------- Header
 }
+
+

@@ -251,8 +251,12 @@ body {
   margin-right: 100px;
 }
 
-.header-top-text {
+.header-top__text {
   margin-left: 5px;
+}
+
+.header-bottom {
+  border-bottom: 1px solid #dddddd;
 }
 
 .header-bottom__wrapp {
@@ -260,13 +264,15 @@ body {
   display: grid;
   -ms-grid-columns: minmax(180px, 245px) minmax(auto, 183px) minmax(auto, 516px) minmax(auto, 60px) minmax(auto, 180px);
       grid-template-columns: minmax(180px, 245px) minmax(auto, 183px) minmax(auto, 516px) minmax(auto, 60px) minmax(auto, 180px);
+  -ms-grid-rows: 45px;
+      grid-template-rows: 45px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 25px;
   padding-bottom: 25px;
-  -webkit-column-gap: 40px;
-          column-gap: 40px;
+  -webkit-column-gap: 25px;
+          column-gap: 25px;
 }
 
 .header-bottom__wrapp .logo__img {
@@ -361,6 +367,10 @@ body {
           transform: translateY(-10px);
 }
 
+.header-bottom__wrapp .order-call {
+  text-align: right;
+}
+
 .header-bottom__wrapp .order-call__img {
   padding: 8px;
   background: -webkit-gradient(linear, left top, left bottom, from(#6b68ff), to(#504cff));
@@ -369,7 +379,15 @@ body {
 }
 
 .header-bottom__wrapp .order-call__link {
-  width: 141px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-weight: 700;
 }
 
@@ -379,4 +397,49 @@ body {
   line-height: 16px;
   color: #676767;
   background: none;
+}
+
+.bread-crumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 175px;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-top: 20px;
+}
+
+.bread-crumbs__img, .bread-crumbs__text-color {
+  color: #2b2a2a;
+}
+
+.bread-crumbs__text {
+  line-height: 17px;
+}
+
+.contact-details__wrapp {
+  display: -ms-grid;
+  display: grid;
+}
+
+.contact-details__item {
+  background: #f7f7f8;
+  border-radius: 10px;
+}
+
+.contact-details__adress {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 22px minmax(auto, 1fr);
+      grid-template-columns: 22px minmax(auto, 1fr);
+}
+
+.contact-details__text {
+  font-weight: 600;
+  line-height: 22px;
+  color: #4945ff;
 }
