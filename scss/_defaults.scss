@@ -81,6 +81,7 @@ $desktopwidth: 1600px;
    max-width: $desktopwidth;
    margin: 0 auto;
    padding: 0 15px;
+   width: 100%;
    @media (max-width: $level_7) {
       padding: 0 8px;
    }
@@ -90,6 +91,7 @@ $desktopwidth: 1600px;
    max-width: $level_2;
    margin: 0 auto;
    padding: 0 15px;
+   width: 100%;
    @media (max-width: $level_7) {
       padding: 0 8px;
    }
