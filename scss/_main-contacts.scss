@@ -18,8 +18,23 @@
 
 .contact-details {
    &__h2 {
+      display: inline-block;
+      &::after {
+         position: relative;
+         bottom: 21px;
+         left: -4px;
+         content: "";
+         display: block;
+         width: 100px;
+         height: 10px;
+         background: rgba(73, 69, 255, 0.2);
+         width: 102%;
+      }
+   }
+   &__title-wrapp {
       text-align: center;
    }
+
    &__wrapp {
       display: grid;
       grid-template-columns: repeat(auto-fit, 369px);
@@ -79,7 +94,7 @@
       line-height: 17px;
    }
    &__img {
-      background: url(../img/index/main-bg-svg.png);
+      background: url(../img/index/main-bg-svg.png) center no-repeat;
    }
    &__img path,
    &__img {
