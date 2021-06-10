@@ -129,7 +129,6 @@ h6 {
 section,
 article,
 header,
-main,
 footer,
 aside {
   display: block;
@@ -152,6 +151,16 @@ body {
 }
 
 .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -346,7 +355,7 @@ body {
   right: 30px;
   width: 18px;
   height: 15px;
-  background-image: url(../img/svg/burger.svg);
+  background-image: url(../img/index/burger.svg);
   z-index: 2;
 }
 
@@ -388,6 +397,7 @@ body {
       grid-row-start: 2;
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
+  fill: #4945ff;
 }
 
 .header-bottom__wrapp .order-call {
@@ -399,6 +409,7 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, from(#6b68ff), to(#504cff));
   background: linear-gradient(180deg, #6b68ff 0%, #504cff 100%);
   border-radius: 50%;
+  fill: white;
 }
 
 .header-bottom__wrapp .order-call__link {
@@ -438,6 +449,10 @@ body {
 
 .bread-crumbs__img, .bread-crumbs__text-color {
   color: #2b2a2a;
+}
+
+.bread-crumbs__img-style {
+  fill: #676767;
 }
 
 .bread-crumbs__text {
@@ -649,8 +664,7 @@ body {
   z-index: 1;
   top: 15px;
   left: 20px;
-  width: 16px;
-  height: 16px;
+  fill: #676767;
 }
 
 .form-call__btn {

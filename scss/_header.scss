@@ -75,7 +75,7 @@
             right: 30px;
             width: 18px;
             height: 15px;
-            background-image: url(../img/svg/burger.svg);
+            background-image: url(../img/index/burger.svg);
             z-index: 2;
          }
          .preview-cart {
@@ -105,6 +105,7 @@
             &__img {
                grid-row-start: 2;
                transform: translateY(-10px);
+               fill: $bluekraiola;
             }
          }
          .order-call {
@@ -113,6 +114,7 @@
                padding: 8px;
                background: linear-gradient(180deg, #6b68ff 0%, #504cff 100%);
                border-radius: 50%;
+               fill: white;
             }
             &__link {
                display: flex;

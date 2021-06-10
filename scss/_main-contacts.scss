@@ -8,6 +8,9 @@
    &__text-color {
       color: $signalblack;
    }
+   &__img-style {
+      fill: $dullgray;
+   }
    &__text {
       line-height: 17px;
    }
@@ -163,8 +166,7 @@
       z-index: 1;
       top: 15px;
       left: 20px;
-      width: 16px;
-      height: 16px;
+      fill: $dullgray;
    }
    &__btn {
       background: linear-gradient(180deg, #716fff 0%, #4945ff 100%);
