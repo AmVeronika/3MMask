@@ -4,7 +4,9 @@
    max-width: 175px;
    align-items: baseline;
    margin-top: 20px;
-   &__img,
+   &_width{
+      max-width: 255px;
+   }
    &__text-color {
       color: $signalblack;
    }
@@ -33,6 +35,7 @@
    }
    &__title-wrapp {
       text-align: center;
+      padding-top: 20px;
    }
 
    &__wrapp {

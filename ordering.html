@@ -92,7 +92,7 @@
    <main id="main" class="main">
       <div class="container">
          <!-- Bread crumbs -->
-         <nav class="bread-crumbs">
+         <nav class="bread-crumbs bread-crumbs_width">
             <svg class="bread-crumbs__img" width="15" height="12">
                <use xlink:href="sprite.svg#home"></use>
             </svg>
@@ -102,90 +102,95 @@
             </svg>
             <p class="semitext bread-crumbs__text ">Оформление заказа</p>
          </nav>
-         
-         <h2 class="h2 contact-details__h2">Оформление заказа</h2>
+         <div class="contact-details__title-wrapp">
+            <h2 class="h2 contact-details__h2">Оформление заказа</h2>
+         </div>
          <!-- Form  -->
          <form action="#" method="POST" class="ordering">
-            <div class="ordering__field method">
-               <div class="ordering__row">
-                  <div class="method__block">
-                     <h3 class="ordering__title extratext">Способ оплаты</h3>
-                     <svg>
-                        <use xlink:href="sprite.svg#credit-card"></use>
-                     </svg>
-                     <p class="ordering__text textbig">Картой онлайн</p>
+            <div class="ordering__wrapper">
+               <div class="ordering__field">
+                  <div class="ordering__row">
+                     <div class="ordering__block">
+                        <h3 class="ordering__title extratext">Способ оплаты</h3>
+                        <svg class="ordering__img">
+                           <use xlink:href="sprite.svg#credit-card"></use>
+                        </svg>
+                        <p class="ordering__text textbig">Картой онлайн</p>
+                     </div>
+                     <button type="button" class="ordering__btn textplus">Изменить</button>
                   </div>
-                  <button type="button" class="ordering__btn textplus">Изменить</button>
+               </div>
+               <div class="ordering__field">
+                  <div class="ordering__row ordering__row_border">
+                     <div class="ordering__block">
+                        <h3 class="ordering__title extratext">Способ получения</h3>
+                        <svg class="ordering__img">
+                           <use xlink:href="sprite.svg#delivery-truck"></use>
+                        </svg>
+                        <p class="ordering__text textbig">Курьером по адресу</p>
+                     </div>
+                     <button type="button" class="ordering__btn textplus">Изменить</button>
+                  </div>
+                  <div class="ordering__row ordering__row_border">
+                     <div class="method__block">
+                        <label class="ordering__text textbig" for="names" class="ordering__text textbig">
+                           <svg class="ordering__img">
+                              <use xlink:href="sprite.svg#user"></use>
+                           </svg>
+                           Имя и фамилия*
+                        </label>
+                        <input class="ordering__input" type="text" required id="names" placeholder="Алина Иванова">
+                     </div>
+                     <div class="method__block">
+                        <label class="ordering__text textbig" for="phone" class="ordering__text textbig">
+                           <svg class="ordering__img">
+                              <use xlink:href="sprite.svg#call-delivery"></use>
+                           </svg>
+                           Номер телефона*
+                        </label>
+                        <input class="ordering__input" type="tel" required id="phone" placeholder="+790 988-889-999">
+                     </div>
+                  </div>
+                  <div class="ordering__row ordering__row_border">
+                     <div class="method__block">
+                        <label class="ordering__text textbig" for="city" class="ordering__text textbig">
+                           <svg class="ordering__img">
+                              <use xlink:href="sprite.svg#map-point"></use>
+                           </svg>
+                           Адрес*
+                        </label>
+                        <input class="ordering__input" type="text" required id="city" placeholder="Город">
+                     </div>
+                     <div class="method__block">
+                        <input class="ordering__input" type="text" required placeholder="Улица, номер дома">
+                     </div>
+                  </div>
+                  <div class="ordering__row ordering__row_border">
+                     <div class="method__block">
+                        <label class="ordering__text textbig" for="mail" class="ordering__text textbig">
+                           <svg class="ordering__img">
+                              <use xlink:href="sprite.svg#mail"></use>
+                           </svg>
+                           Электронная почта
+                        </label>
+                        <input class="ordering__input" id="mail" type="mail" placeholder="myemail@mail.com">
+                     </div>
+                  </div>
+                  <div class="ordering__row">
+                     <div class="method__block">
+                        <label class="ordering__text textbig" for="comments" class="ordering__text textbig">
+                           <svg class="ordering__img">
+                              <use xlink:href="sprite.svg#comments"></use>
+                           </svg>
+                           Комментарий курьеру
+                        </label>
+                        <textarea class="ordering__input" id="comments"
+                           placeholder="Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное"></textarea>
+                     </div>
+                  </div>
                </div>
             </div>
-            <div class="ordering__field method">
-               <div class="ordering__row">
-                  <div class="method__block">
-                     <h3 class="ordering__title extratext">Способ получения</h3>
-                     <svg>
-                        <use xlink:href="sprite.svg#delivery-truck"></use>
-                     </svg>
-                     <p class="ordering__text textbig">Курьером по адресу</p>
-                  </div>
-                  <button type="button" class="ordering__btn textplus">Изменить</button>
-               </div>
-               <div class="ordering__row">
-                  <div class="method__block">
-                     <label class="ordering__text" for="names" class="ordering__text textbig">
-                        <svg>
-                           <use xlink:href="sprite.svg#user"></use>
-                        </svg>
-                        Имя и фамилия*
-                     </label>
-                     <input class="ordering__input" type="text" required id="names" placeholder="Алина Иванова">
-                  </div>
-                  <div class="method__block">
-                     <label class="ordering__text" for="phone" class="ordering__text textbig">
-                        <svg>
-                           <use xlink:href="sprite.svg#call-delivery"></use>
-                        </svg>
-                        Номер телефона*
-                     </label>
-                     <input class="ordering__input" type="tel" required id="phone" placeholder="+790 988-889-999">
-                  </div>
-               </div>
-               <div class="ordering__row">
-                  <div class="method__block">
-                     <label class="ordering__text" for="city" class="ordering__text textbig">
-                        <svg>
-                           <use xlink:href="sprite.svg#map-point"></use>
-                        </svg>
-                        Адрес*
-                     </label>
-                     <input class="ordering__input" type="text" required id="city" placeholder="Город">
-                  </div>
-                  <div class="method__block">
-                     <input class="ordering__input" type="text" required placeholder="Улица, номер дома">
-                  </div>
-               </div>
-               <div class="ordering__row">
-                  <div class="method__block">
-                     <label class="ordering__text" for="mail" class="ordering__text textbig">
-                        <svg>
-                           <use xlink:href="sprite.svg#mail"></use>
-                        </svg>
-                        Электронная почта
-                     </label>
-                     <input class="ordering__input" id="mail" type="mail" placeholder="myemail@mail.com">
-                  </div>
-               </div>
-               <div class="ordering__row">
-                  <label class="ordering__text" for="comments" class="ordering__text textbig">
-                     <svg>
-                        <use xlink:href="sprite.svg#comments"></use>
-                     </svg>
-                     Комментарий курьеру
-                  </label>
-                  <textarea class="ordering__input" id="comments"
-                     placeholder="Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное"></textarea>
-               </div>
-            </div>
-            <div class="ordering__field">
+            <div class="ordering__field ordering__field_flex">
                <div class="ordering__row your-order">
                   <h3 class="your-order__title textbig">Ваш заказ</h3>
                   <p class="your-order__count text">3 товара </p>
@@ -202,11 +207,25 @@
                   </div>
                   <div class="ordering__mini-row">
                      <p class="ordering__text textplus">Доставка</p>
-                     <p class="ordering__price extratext">180 ₽</p>
+                     <p class="ordering__price textbig">180 ₽</p>
                   </div>
                </div>
                <div class="ordering__row">
-
+                  <div class="ordering__mini-row">
+                     <h3 class="ordering__title extratext">Общая стоимость</h3>
+                     <p class="ordering__price ordering__price_big">1 280 ₽</p>
+                  </div>
+               </div>
+               <div class="ordering__row">
+                  <label class="form-call__input_wrap">
+                     <svg class="form-call__svg" width="16" height="16">
+                        <use xlink:href="sprite.svg#coupon"></use>
+                     </svg>
+                     <input class="form-call__input text" type="text" name="coupon" placeholder="У меня есть промокод">
+                  </label>
+               </div>
+               <div class="ordering__row">
+                  <button type="submit semitext form-call__btn">Оплатить онлайн</button>
                </div>
             </div>
          </form>
