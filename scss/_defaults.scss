@@ -66,7 +66,7 @@ $texttransform: (
 
 // MEDIA
 $level_1: 1350px;
-$level_2: 1170px;
+$level_2: 1200px;
 // $level_3: 1000px;
 // $level_4: 900px;
 // $level_5: 800px;
@@ -118,27 +118,27 @@ body {
 }
 
 .h1 {
-   @include fontstyle(h1, bold, none);
+   @include fontstyle(bold, h1, none);
    line-height: 50px;
    color: $lazureblue;
 }
 .h2 {
-   @include fontstyle(h2, bold, none);
+   @include fontstyle(bold, h2, none);
    line-height: 50px;
    color: $signalblack;
 }
 .h3 {
-   @include fontstyle(h3, bold, none);
+   @include fontstyle(bold, h3, none);
    line-height: 50px;
    color: $signalblack;
 }
 .h4 {
-   @include fontstyle(h4, bold, none);
+   @include fontstyle(bold, h4, none);
    line-height: 24px;
    color: $signalblack;
 }
 .h5 {
-   @include fontstyle(h5, extrabold, none);
+   @include fontstyle(extrabold, h5, none);
    line-height: 32px;
    color: $signalblack;
 }

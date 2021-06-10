@@ -14,21 +14,91 @@
 }
 
 .contact-details {
+   &__h2 {
+      text-align: center;
+   }
    &__wrapp {
       display: grid;
+      grid-template-columns: repeat(auto-fit, 369px);
+      grid-template-rows: repeat(2, min-content);
+      margin-top: 50px;
+      margin-bottom: 50px;
+      column-gap: 30px;
+      position: relative;
    }
-   &__item {
-      background: $verypaleblue;
-      border-radius: 10px;
+   &__wrapp::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 150px;
+      left: 49px;
+      max-width: 901px;
+      width: 98%;
+      height: 4px;
+      background-color: #6c69ffab;
+      z-index: -1;
+      margin: 15px;
    }
-   &__adress {
-      display: grid;
-      grid-template-columns: 22px minmax(auto, 1fr);
-   }
-   &__text {
+
+   &__text-style {
+      grid-column: 1;
       font-weight: 600;
       line-height: 22px;
       color: $bluekraiola;
+   }
+   &__text-style2 {
+      grid-column: 2;
+   }
+   &__text-style3 {
+      grid-column: 3;
+   }
+
+   &__item {
+      grid-row: 2;
+      padding: 30px 30px 10px;
+      background: $verypaleblue;
+      border-radius: 10px;
+      margin-top: 10px;
+   }
+   &__block {
+      display: grid;
+      grid-template-columns: 22px minmax(auto, 1fr);
+      gap: 8px;
+      margin-bottom: 20px;
+   }
+   &__title {
+      font-weight: 500;
+      line-height: 19px;
+      color: $signalblack;
+   }
+   &__text {
+      grid-column: 2/3;
+      line-height: 17px;
+   }
+   &__img {
+      background: url(../img/index/main-bg-svg.png);
+   }
+   &__img path,
+   &__img {
+      fill: $bluekraiola;
+   }
+   &__ul {
+      grid-column: 2;
+   }
+   &__li {
+      list-style-type: disc;
+      color: $bluekraiola;
+      span {
+         color: $signalblack;
+      }
+      &-style {
+         font-weight: 500;
+         color: $signalblack;
+      }
+   }
+   &__indent {
+      padding-top: 7px;
+      padding-bottom: 7px;
    }
 }
 
