@@ -139,7 +139,8 @@
                            </svg>
                            Имя и фамилия*
                         </label>
-                        <input class="ordering__input" type="text" required id="names" placeholder="Алина Иванова">
+                        <input class="ordering__input textplus" type="text" required id="names"
+                           placeholder="Алина Иванова">
                      </div>
                      <div class="method__block">
                         <label class="ordering__text textbig" for="phone" class="ordering__text textbig">
@@ -148,7 +149,8 @@
                            </svg>
                            Номер телефона*
                         </label>
-                        <input class="ordering__input" type="tel" required id="phone" placeholder="+790 988-889-999">
+                        <input class="ordering__input textplus" type="tel" required id="phone"
+                           placeholder="+790 988-889-999">
                      </div>
                   </div>
                   <div class="ordering__row ordering__row_border">
@@ -159,10 +161,10 @@
                            </svg>
                            Адрес*
                         </label>
-                        <input class="ordering__input" type="text" required id="city" placeholder="Город">
+                        <input class="ordering__input textplus" type="text" required id="city" placeholder="Город">
                      </div>
                      <div class="method__block">
-                        <input class="ordering__input" type="text" required placeholder="Улица, номер дома">
+                        <input class="ordering__input textplus" type="text" required placeholder="Улица, номер дома">
                      </div>
                   </div>
                   <div class="ordering__row ordering__row_border">
@@ -173,37 +175,37 @@
                            </svg>
                            Электронная почта
                         </label>
-                        <input class="ordering__input" id="mail" type="mail" placeholder="myemail@mail.com">
+                        <input class="ordering__input textplus" id="mail" type="mail" placeholder="myemail@mail.com">
                      </div>
                   </div>
                   <div class="ordering__row">
-                     <div class="method__block">
+                     <div class="method__block method__block_width">
                         <label class="ordering__text textbig" for="comments" class="ordering__text textbig">
                            <svg class="ordering__img">
                               <use xlink:href="sprite.svg#comments"></use>
                            </svg>
                            Комментарий курьеру
                         </label>
-                        <textarea class="ordering__input" id="comments"
+                        <textarea class="ordering__textarea textplus" id="comments"
                            placeholder="Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное"></textarea>
                      </div>
                   </div>
                </div>
             </div>
             <div class="ordering__field ordering__field_flex">
-               <div class="ordering__row your-order">
+               <div class="ordering__row ordering__row_border your-order">
                   <h3 class="your-order__title textbig">Ваш заказ</h3>
                   <p class="your-order__count text">3 товара </p>
                </div>
-               <div class="ordering__row">
+               <div class="ordering__row ordering__row_border ordering__row_flex-dir">
                   <div class="ordering__mini-row">
                      <p class="ordering__text textplus">Товары (3)</p>
-                     <p class="ordering__price extratext">180 ₽</p>
+                     <p class="ordering__price extratext ordering__price_blue">180 ₽</p>
                   </div>
                   <div class="ordering__mini-row">
                      <p class="ordering__text textplus">Скидка</p>
-                     <p class="ordering__price extratext">- 90 ₽</p>
-                     <p class="ordering__text semitext"></p>
+                     <p class="ordering__price ordering__price_red textbig">- 90 ₽</p>
+                     <p class="ordering__text ordering__text_blue semitext">Подробнее</p>
                   </div>
                   <div class="ordering__mini-row">
                      <p class="ordering__text textplus">Доставка</p>
@@ -211,24 +213,27 @@
                   </div>
                </div>
                <div class="ordering__row">
-                  <div class="ordering__mini-row">
-                     <h3 class="ordering__title extratext">Общая стоимость</h3>
-                     <p class="ordering__price ordering__price_big">1 280 ₽</p>
+                  <div class="ordering__row">
+                     <h3 class="ordering__title ordering__title_grid extratext">Общая стоимость</h3>
+                     <p class="ordering__price ordering__price_big ordering__price_blue">1 280 ₽</p>
                   </div>
                </div>
-               <div class="ordering__row">
-                  <label class="form-call__input_wrap">
-                     <svg class="form-call__svg" width="16" height="16">
+               <div class="ordering__row ordering__row_padding">
+                  <label class="form-call__input_wrap ordering__text">
+                     <svg class="form-call__svg" width="20" height="20">
                         <use xlink:href="sprite.svg#coupon"></use>
                      </svg>
-                     <input class="form-call__input text" type="text" name="coupon" placeholder="У меня есть промокод">
+                     <input class="ordering__input ordering__input_padding text" type="text" name="coupon"
+                        placeholder="У меня есть промокод">
                   </label>
                </div>
                <div class="ordering__row">
-                  <button type="submit semitext form-call__btn">Оплатить онлайн</button>
+                  <button type="submit" class="form-call__btn ordering__button semitext">Оплатить онлайн</button>
                </div>
             </div>
          </form>
+         <p class="ordering-info textbig">Доставка в пределах МКАД - <span>350р</span>. Доставка за пределы МКАД и в <br>
+            регионы рассчитывается отдельно после оформления заказа.</p>
       </div>
    </main>
    <!-- FOOTER  -->
