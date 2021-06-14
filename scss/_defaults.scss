@@ -183,6 +183,12 @@ body {
       background: rgba(73, 69, 255, 0.2);
    }
 }
+.btn-1 {
+   background: linear-gradient(180deg, #716fff 0%, #4945ff 100%);
+   border-radius: 10px;
+   padding: 17px 57px;
+   color: $verypaleblue;
+}
 
 // HOVER
 @media (min-width: 678px) {

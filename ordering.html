@@ -149,7 +149,7 @@
                            </svg>
                            Номер телефона*
                         </label>
-                        <input class="ordering__input textplus" type="tel" required id="phone"
+                        <input class="ordering__input textplus" type="tel" required id="phone" pattern="+7-[0-9]{3}-[0-9]{3}-[0-9]{4}"
                            placeholder="+790 988-889-999">
                      </div>
                   </div>
@@ -175,7 +175,7 @@
                            </svg>
                            Электронная почта
                         </label>
-                        <input class="ordering__input textplus" id="mail" type="mail" placeholder="myemail@mail.com">
+                        <input class="ordering__input textplus" id="mail" type="email" placeholder="myemail@mail.com">
                      </div>
                   </div>
                   <div class="ordering__row">
@@ -228,7 +228,7 @@
                   </label>
                </div>
                <div class="ordering__row">
-                  <button type="submit" class="form-call__btn ordering__button semitext">Оплатить онлайн</button>
+                  <button type="submit" class="btn-1 ordering__button semitext">Оплатить онлайн</button>
                </div>
             </div>
          </form>

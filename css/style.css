@@ -262,6 +262,14 @@ body {
   background: rgba(73, 69, 255, 0.2);
 }
 
+.btn-1 {
+  background: -webkit-gradient(linear, left top, left bottom, from(#716fff), to(#4945ff));
+  background: linear-gradient(180deg, #716fff 0%, #4945ff 100%);
+  border-radius: 10px;
+  padding: 17px 57px;
+  color: #f7f7f8;
+}
+
 .header-top {
   background: #eff0f1;
 }
@@ -748,53 +756,45 @@ body {
   bottom: 11px;
 }
 
-.form-call__title__subtitle {
+.form-call__subtitle {
   font-size: 16px;
   line-height: 22px;
   text-align: center;
   color: #2b2a2a;
 }
 
-.form-call__title__input {
+.form-call__input {
   background: #f7f7f8;
   border-radius: 10px;
   padding: 13px 76px 13px 46px;
 }
 
-.form-call__title__input::-webkit-input-placeholder {
+.form-call__input::-webkit-input-placeholder {
   color: #676767;
 }
 
-.form-call__title__input:-ms-input-placeholder {
+.form-call__input:-ms-input-placeholder {
   color: #676767;
 }
 
-.form-call__title__input::-ms-input-placeholder {
+.form-call__input::-ms-input-placeholder {
   color: #676767;
 }
 
-.form-call__title__input::placeholder {
+.form-call__input::placeholder {
   color: #676767;
 }
 
-.form-call__title__input_wrap {
+.form-call__input_wrap {
   position: relative;
 }
 
-.form-call__title__svg {
+.form-call__svg {
   position: absolute;
   z-index: 1;
   top: 15px;
   left: 20px;
   fill: #676767;
-}
-
-.form-call__title__btn {
-  background: -webkit-gradient(linear, left top, left bottom, from(#716fff), to(#4945ff));
-  background: linear-gradient(180deg, #716fff 0%, #4945ff 100%);
-  border-radius: 10px;
-  padding: 17px 57px;
-  color: #f7f7f8;
 }
 
 .ordering {
@@ -984,6 +984,7 @@ body {
 }
 
 .ordering__textarea {
+  font-weight: 400;
   padding: 20px;
   min-height: 108px;
   resize: none;
@@ -1096,16 +1097,12 @@ body {
 }
 
 .screen__btn {
-  color: white;
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.02em;
   text-align: center;
   padding: 20px 35px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#716fff), to(#4945ff));
-  background: linear-gradient(180deg, #716fff 0%, #4945ff 100%);
-  border-radius: 10px;
 }
 
 .screen__right {
@@ -1159,6 +1156,7 @@ body {
   max-width: 771px;
   margin: 70px auto;
   text-align: center;
+  /* Всплывающая подсказка */
 }
 
 .wholesale-shape__h2 {
@@ -1172,29 +1170,83 @@ body {
 }
 
 .wholesale-shape__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 370px))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(200px, 370px));
   gap: 28px;
   margin-top: 50px;
 }
 
 .wholesale-shape__label {
-  padding: 20px 156px 20px 20px;
+  padding: 20px;
   background: #f7f7f8;
   border-radius: 10px;
+  width: 100%;
+  text-align: left;
 }
 
-.wholesale-shape__label:last-child {
-  padding-right: 555px;
+.wholesale-shape__label:last-of-type {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
 }
 
 .wholesale-shape__img {
   margin-right: 10px;
+  fill: #676767;
+  margin-bottom: -3px;
 }
 
 .wholesale-shape__input {
   background: #f7f7f8;
+  line-height: 19px;
+  width: 83%;
+}
+
+.wholesale-shape [data-tooltip] {
+  position: relative;
+}
+
+.wholesale-shape [data-tooltip]::after {
+  content: attr(data-tooltip);
+  /* Выводим текст */
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 5px;
+  opacity: 0;
+  color: #343434;
+  padding: 5px;
+  background: #6c69ff62;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  pointer-events: auto;
+  /* Элемент не может быть целью (target) событий мыши */
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.wholesale-shape [data-tooltip]:hover::after {
+  opacity: 1;
+  top: -30px;
+}
+
+.wholesale-shape__textarea {
+  resize: none;
+  min-height: 114px;
+  width: 94%;
+}
+
+.wholesale-shape .img__textarea {
+  margin-bottom: 96px;
+}
+
+.wholesale-shape__btn {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  max-width: 178px;
+  margin: 0 auto;
 }

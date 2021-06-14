@@ -142,6 +142,7 @@
          height: 6px;
          bottom: 11px;
       }
+   }
       &__subtitle {
          font-size: 16px;
          line-height: 22px;
@@ -166,11 +167,4 @@
          left: 20px;
          fill: $dullgray;
       }
-      &__btn {
-         background: linear-gradient(180deg, #716fff 0%, #4945ff 100%);
-         border-radius: 10px;
-         padding: 17px 57px;
-         color: $verypaleblue;
-      }
    }
-}

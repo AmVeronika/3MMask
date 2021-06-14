@@ -107,7 +107,7 @@
             <div class="screen__left">
                <h1 class="h1 screen__h1 hr-h2">Респираторы оптом <br> со скидкой до 50%</h1>
                <p class="extratext screen__extratext">И доставкой в день заказа.</p>
-               <a href="catalog.html" class="screen__btn">Перейти в каталог</a>
+               <a href="catalog.html" class="btn-1 screen__btn">Перейти в каталог</a>
             </div>
             <div class="screen__right">
                <img class="screen__right-img" src="img/wholesale/main_screen_mask.png" alt="" width="200" height="200">
@@ -161,25 +161,28 @@
             <h2 class="h2 wholesale-shape__h2 hr-h2">Заполните форму</h2>
             <p class="textbig wholesale-shape__textbig">Для оптового и мелкооптового заказа или оформите заказ через
                корзину. Возможны поставки как поштучно, так и партиями с индивидуальными скидками от объёма.</p>
-            <form action="" class="wholesale-shape__form">
+            <form action="#" class="wholesale-shape__form">
                <label for="" class="wholesale-shape__label">
                   <svg class="wholesale-shape__img" width="16" height="16">
                      <use xlink:href="sprite.svg#mail"></use>
                   </svg>
-                  <input class="wholesale-shape__input" type="mail" placeholder="Электронная почта">
+                  <input class="wholesale-shape__input text" type="email" placeholder="Электронная почта">
                </label>
-               <label for="" class="wholesale-shape__label">
+               <label for="" class="wholesale-shape__label" data-tooltip="+7-123-456-78-90">
                   <svg class="wholesale-shape__img" width="16" height="16">
                      <use xlink:href="sprite.svg#call-delivery"></use>
                   </svg>
-                  <input class="wholesale-shape__input" type="phone" placeholder="Ваш телефон">
+                  <input class="wholesale-shape__input text" type="tel" placeholder="Ваш телефон"
+                     pattern="[+7]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
                </label>
                <label for="" class="wholesale-shape__label">
-                  <svg class="wholesale-shape__img" width="16" height="16">
+                  <svg class="wholesale-shape__img img__textarea" width="16" height="16">
                      <use xlink:href="sprite.svg#list"></use>
                   </svg>
-                  <input class="wholesale-shape__input" type="text" placeholder="Ваш коментарий">
+                  <textarea class="wholesale-shape__input wholesale-shape__textarea text"
+                     placeholder="Ваш коментарий"></textarea>
                </label>
+               <input type="submit" class="btn-1 semitext wholesale-shape__btn" value="Отправить">
             </form>
          </div>
 
