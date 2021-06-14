@@ -1,6 +1,6 @@
 .bread-crumbs {
    display: flex;
-   justify-content: space-between;
+   gap: 10px;
    max-width: 175px;
    align-items: baseline;
    margin-top: 20px;
@@ -19,20 +19,6 @@
 }
 
 .contact-details {
-   &__h2 {
-      display: inline-block;
-      &::after {
-         position: relative;
-         bottom: 21px;
-         left: -4px;
-         content: "";
-         display: block;
-         width: 100px;
-         height: 10px;
-         background: rgba(73, 69, 255, 0.2);
-         width: 102%;
-      }
-   }
    &__title-wrapp {
       text-align: center;
       padding-top: 20px;
@@ -153,43 +139,38 @@
       text-align: center;
       color: $signalblack;
       &::after {
-         position: relative;
-         bottom: 11px;
-         content: "";
-         display: block;
-         width: 240px;
          height: 6px;
-         background: rgba(73, 69, 255, 0.3);
+         bottom: 11px;
       }
-   }
-   &__subtitle {
-      font-size: 16px;
-      line-height: 22px;
-      text-align: center;
-      color: #2b2a2a;
-   }
-   &__input {
-      background: #f7f7f8;
-      border-radius: 10px;
-      padding: 13px 76px 13px 46px;
-      &::placeholder {
-         color: $dullgray;
+      &__subtitle {
+         font-size: 16px;
+         line-height: 22px;
+         text-align: center;
+         color: #2b2a2a;
       }
-      &_wrap {
-         position: relative;
+      &__input {
+         background: #f7f7f8;
+         border-radius: 10px;
+         padding: 13px 76px 13px 46px;
+         &::placeholder {
+            color: $dullgray;
+         }
+         &_wrap {
+            position: relative;
+         }
       }
-   }
-   &__svg {
-      position: absolute;
-      z-index: 1;
-      top: 15px;
-      left: 20px;
-      fill: $dullgray;
-   }
-   &__btn {
-      background: linear-gradient(180deg, #716fff 0%, #4945ff 100%);
-      border-radius: 10px;
-      padding: 17px 57px;
-      color: $verypaleblue;
+      &__svg {
+         position: absolute;
+         z-index: 1;
+         top: 15px;
+         left: 20px;
+         fill: $dullgray;
+      }
+      &__btn {
+         background: linear-gradient(180deg, #716fff 0%, #4945ff 100%);
+         border-radius: 10px;
+         padding: 17px 57px;
+         color: $verypaleblue;
+      }
    }
 }

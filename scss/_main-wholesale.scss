@@ -1,7 +1,100 @@
-// .screen {
-//    display: flex;
-//    justify-content: space-between;
-//    &__info {
-//       width: 50%;
-//    }
-// }
+.screen {
+   display: flex;
+   justify-content: space-between;
+   gap: 20px;
+   padding-top: 23px;
+   padding-bottom: 50px;
+   &__left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-start;
+   }
+   &__h1 {
+      color: $signalblack;
+   }
+   &__extratext {
+      font-weight: 400;
+      line-height: 30px;
+      color: $graybrown;
+   }
+   &__btn {
+      color: white;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.02em;
+      text-align: center;
+      padding: 20px 35px;
+      background: linear-gradient(180deg, #716fff 0%, #4945ff 100%);
+      border-radius: 10px;
+   }
+   &__right {
+      align-self: center;
+   }
+   &__bg-img {
+      width: 100%;
+   }
+}
+.advantages {
+   padding-top: 50px;
+   padding-bottom: 20px;
+   background: $verypaleblue;
+   &__wrapp {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 369px);
+      grid-template-rows: repeat(2, min-content);
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      column-gap: 30px;
+   }
+   &__item {
+      padding: 30px 35px 50px;
+      background: white;
+      border-radius: 10px;
+      margin-top: 10px;
+   }
+   &__textplus {
+      color: black;
+      margin: 30px 0 15px;
+   }
+   &__text {
+      line-height: 22px;
+   }
+}
+.wholesale-shape {
+   max-width: 771px;
+   margin: 70px auto;
+   text-align: center;
+   &__h2 {
+      font-weight: 800;
+      text-transform: none;
+   }
+   &__textbig {
+      font-weight: 400;
+      color: $signalblack;
+   }
+
+   &__form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      margin-top: 50px;
+   }
+   &__label {
+      padding: 20px 156px 20px 20px;
+      background: $verypaleblue;
+      border-radius: 10px;
+      &:last-child {
+         padding-right: 555px;
+      }
+   }
+   &__img {
+      margin-right: 10px;
+   }
+
+   &__input {
+      background: $verypaleblue;
+   }
+}
