@@ -1,0 +1,149 @@
+.ordering {
+   display: flex;
+   justify-content: space-between;
+   gap: 30px;
+   padding-top: 30px;
+   padding-bottom: 30px;
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 30px;
+      max-width: 1070px;
+      flex-grow: 1;
+   }
+   &__field {
+      background: $verypaleblue;
+      border-radius: 10px;
+      padding: 30px;
+      &_flex {
+         max-width: 470px;
+         width: 100%;
+         height: fit-content;
+      }
+   }
+   &__row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-grow: 1;
+      &_border {
+         border-bottom: 1px solid #c4c4c4;
+         padding-bottom: 30px;
+         margin-bottom: 30px;
+      }
+      &_flex-dir {
+         flex-direction: column;
+      }
+      &_padding{
+         padding: 30px 0;
+      }
+   }
+   &__mini-row {
+      display: grid;
+      gap: 0 25px;
+      padding-bottom: 25px;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      width: 100%;
+      &:last-child {
+         padding-bottom: 0;
+      }
+   }
+   &__price {
+      justify-self: end;
+      &_blue {
+         font-weight: 700;
+         color: $bluekraiola;
+      }
+      &_red {
+         color: $yellowpink;
+         font-weight: 600;
+         line-height: 22px;
+      }
+      &_big {
+         font-size: 24px;
+         line-height: 29px;
+      }
+   }
+   &__block {
+      display: grid;
+      grid-template-columns: 26px minmax(auto, 1fr);
+      gap: 13px 10px;
+   }
+   &__title {
+      grid-column: 1/3;
+      font-weight: 700;
+      line-height: 24px;
+      &_grid {
+         grid-column: 1/2;
+      }
+   }
+   &__img {
+      margin-right: 10px;
+      width: 26px;
+      height: 26px;
+      fill: $dullgray;
+   }
+   &__btn {
+      background: #ffffff;
+      border-radius: 10px;
+      color: $bluekraiola;
+      padding: 15px 33px;
+   }
+   &__button{
+      font-weight: 500;
+   }
+   &__input {
+      padding: 15px 209px 15px 20px;
+      border-radius: 10px;
+      &::placeholder {
+         color: #000;
+      }
+      &_padding{
+         padding-left: 50px;
+         padding-right: 182px;
+         // margin: 30px 0;
+      }
+   }
+   &__text_blue {
+      line-height: 17px;
+      font-weight: 500;
+      color: $bluekraiola;
+   }
+   &__textarea {
+      font-weight: 400;
+      padding: 20px;
+      min-height: 108px;
+      resize: none;
+      &::placeholder {
+         color: #000;
+      }
+   }
+   &-info{
+      padding-left: 20px;
+      padding-bottom: 60px;
+      color: $signalblack;
+      span{
+         font-weight: 600;
+      }
+   }
+}
+.method__block {
+   display: flex;
+   flex-direction: column;
+   max-width: 439px;
+   width: 100%;
+   gap: 20px;
+   &_width {
+      max-width: 100%;
+   }
+}
+.your-order {
+   &__title {
+      font-weight: 700;
+      color: $signalblack;
+      line-height: 22px;
+      text-transform: uppercase;
+   }
+}
