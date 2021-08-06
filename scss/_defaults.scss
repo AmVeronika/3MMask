@@ -122,17 +122,17 @@ body {
 }
 
 .h1 {
-   @include fontstyle(bold, h1, cap);
+   @include fontstyle(bold, h1, none);
    line-height: 50px;
    color: $lazureblue;
 }
 .h2 {
-   @include fontstyle(bold, h2, cap);
+   @include fontstyle(bold, h2, none);
    line-height: 50px;
    color: $signalblack;
 }
 .h3 {
-   @include fontstyle(bold, h3, cap);
+   @include fontstyle(bold, h3, none);
    line-height: 50px;
    color: $signalblack;
 }
