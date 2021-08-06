@@ -42,6 +42,7 @@ $texttransform: (
    upper: uppercase,
 );
 
+
 // Nixit for font style
 @mixin fontstyle($fw, $fs, $tt) {
    @if map-has-key($fontweight, $fw) {
@@ -122,17 +123,17 @@ body {
 }
 
 .h1 {
-   @include fontstyle(bold, h1, cap);
+   @include fontstyle(bold, h1, none);
    line-height: 50px;
    color: $lazureblue;
 }
 .h2 {
-   @include fontstyle(bold, h2, cap);
+   @include fontstyle(bold, h2, none);
    line-height: 50px;
    color: $signalblack;
 }
 .h3 {
-   @include fontstyle(bold, h3, cap);
+   @include fontstyle(bold, h3, none);
    line-height: 50px;
    color: $signalblack;
 }
@@ -170,18 +171,6 @@ body {
    @include fontstyle(regular, semitext, none);
    line-height: 22px;
    color: $dullgray;
-}
-.hr-h2 {
-   display: inline-block;
-   &::after {
-      position: relative;
-      bottom: 21px;
-      left: 0;
-      content: "";
-      display: block;
-      height: 10px;
-      background: rgba(73, 69, 255, 0.2);
-   }
 }
 
 // HOVER
