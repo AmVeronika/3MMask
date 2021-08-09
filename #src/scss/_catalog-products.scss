@@ -1,0 +1,14 @@
+.catalog__cards {
+   display: flex;
+   justify-content: space-between;
+}
+.catalog__card {
+   display: flex;
+   flex-direction: column;
+   width: 364px;
+   padding: 20px;
+   background: #fff;
+   &-img {
+      width: 320px;
+   }
+}
