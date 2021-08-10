@@ -63,18 +63,18 @@
    }
 }
 .wholesale__shape {
-   position: relative;
 }
 .wholesale__shape picture {
    position: absolute;
    top: 50%;
-   left: 75%;
+   right: -253px;
    transform: translateY(-35%) rotate(16.64deg);
 }
 .wholesale-shape {
    max-width: 771px;
    margin: 70px auto;
    text-align: center;
+   position: relative;
    &__h2 {
       font-weight: 800;
       text-transform: none;

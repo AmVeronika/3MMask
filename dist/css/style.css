@@ -1142,14 +1142,10 @@ body {
   line-height: 22px;
 }
 
-.wholesale__shape {
-  position: relative;
-}
-
 .wholesale__shape picture {
   position: absolute;
   top: 50%;
-  left: 75%;
+  right: -253px;
   -webkit-transform: translateY(-35%) rotate(16.64deg);
       -ms-transform: translateY(-35%) rotate(16.64deg);
           transform: translateY(-35%) rotate(16.64deg);
@@ -1159,6 +1155,7 @@ body {
   max-width: 771px;
   margin: 70px auto;
   text-align: center;
+  position: relative;
   /* Всплывающая подсказка */
 }
 
